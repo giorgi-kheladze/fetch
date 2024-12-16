@@ -2,6 +2,7 @@ const api = "https://6734a44fa042ab85d11b0c1a.mockapi.io/photos";
 const buttons = document.getElementById("buttons");
 const mainImg = document.getElementById("main-img");
 const otherImg = document.getElementById("other-img");
+const errorMessage = document.getElementById("errormessage")
 
 const id = document.getElementById("ctgr")
 const name = document.getElementById("name")
@@ -13,9 +14,11 @@ async function getData() {
             throw new Error("Could not fetch");
         }
         const data = await response.json();
+        console.log(data)
         createButtons(data);
     } catch (error) {
         console.error(error);
+        errorMessage.innerHTML = error
     }
 }
 
