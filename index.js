@@ -46,12 +46,12 @@ function display(category) {
         mainImg.appendChild(mainImageElement);
 
         const otherImages = category.photos.slice(1);
-        otherImages.forEach(photoUrl => {
+        otherImages.forEach(photo => {
             const img = document.createElement("img");
-            img.src = photoUrl;
+            img.src = photo;
             img.classList.add("other-image");
             img.addEventListener("click", () => {
-                swapImages(photoUrl, img);
+                swapImages(photo, img);
             });
             otherImg.appendChild(img);
         });
