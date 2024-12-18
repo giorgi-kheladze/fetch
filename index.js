@@ -71,3 +71,6 @@ function swapImages(photoUrl, clickedImg) {
 }
 
 getData();
+
+
+console.log("Succeed");
